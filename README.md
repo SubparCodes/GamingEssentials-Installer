@@ -1,4 +1,4 @@
-Thank you for downloading my GameAppInstaller!
+Thank you for downloading my GameEssentials-Installer!
 
 *DISCLAIMER*: Copilot was used in the creation of this script as I am very new to this.
 
