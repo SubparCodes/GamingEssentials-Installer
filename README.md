@@ -1,6 +1,6 @@
 Thank you for downloading my GameEssentials-Installer!
 
-*DISCLAIMER*: Copilot was used in the creation of this script as I am very new to this.
+*DISCLAIMER*: Copilot was used  to help me figure out how to use certain commands and help figure out errors I was getting as I am very new to this but I did not have it make the script for me.
 
 This app will let you select from a list of very commonly used apps on Gaming PCs. If I am missing any apps, please let me know. If there are any issues, please let me know. If the app is already installed it should skip it if you have it selected. I made this to streamline setting up new gaming PCs rather than scouring the internet to get all the installers I need.
 
