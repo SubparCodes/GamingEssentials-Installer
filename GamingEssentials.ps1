@@ -23,14 +23,12 @@ $apps = @(
     @{ Name="OBS Studio"; Url="https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.0.2-Full-Installer-x64.exe"; Category="Streaming" }
 
     # GPU / Performance
-    @{ Name="MSI Afterburner"; Url="https://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip"; Category="GPU / Performance" }
-    @{ Name="NVIDIA GeForce Experience"; Url="https://us.download.nvidia.com/GFE/GFEClient/3.27.0.120/GeForce_Experience_v3.27.0.120.exe"; Category="GPU / Performance" }
-    @{ Name="AMD Adrenalin"; Url="https://drivers.amd.com/drivers/installer/amd-software-adrenalin-edition.exe"; Category="GPU / Performance" }
+    @{ Name="MSI Afterburner"; Url="https://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip?__token__=exp=1781081256~acl=/*~hmac=bf9fbc1f76ec60e1b45828cab6b0b876abaf0d39f596e8728694ab1248ffc7a7"; Category="GPU / Performance" }
+    @{ Name="NVIDIA App"; Url="https://us.download.nvidia.com/nvapp/client/11.0.7.247/NVIDIA_app_v11.0.7.247.exe"; Category="GPU / Performance" }
 
     # Utilities
     @{ Name="7-Zip"; Url="https://www.7-zip.org/a/7z2408-x64.exe"; Category="Utilities" }
     @{ Name="WinRAR"; Url="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-701.exe"; Category="Utilities" }
-    @{ Name="Notepad++"; Url="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/latest/download/npp.8.6.2.Installer.x64.exe"; Category="Utilities" }
 
     # Peripherals
     @{ Name="Razer Synapse"; Url="https://rzr.to/synapse-3-pc-download"; Category="Peripherals" }
