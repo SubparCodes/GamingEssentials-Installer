@@ -11,15 +11,13 @@ $apps = @(
     @{ Name="Battle.net"; Url="https://downloader.battle.net/download/getInstaller?os=win&installer=Battle.net-Setup.exe"; Category="Launchers" }
     @{ Name="GOG Galaxy"; Url="https://webinstallers.gog-statics.com/download/GOG_Galaxy_2.0.exe"; Category="Launchers" }
     @{ Name="EA App"; Url="https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe"; Category="Launchers" }
-    @{ Name="Xbox App"; Url="https://aka.ms/xboxappdownload"; Category="Launchers" }
-    @{ Name="Riot Client"; Url="https://client.riotgames.com/install"; Category="Launchers" }
     @{ Name="Rockstar Games"; Url="https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe"; Category="Launchers" }
     @{ Name="Amazon Games"; Url="https://download.amazongames.com/AmazonGamesSetup.exe"; Category="Launchers" }
     @{ Name="Itch.io"; Url="https://itch.io/app/download?platform=windows"; Category="Launchers" }
-    @{ Name="Medal"; Url="https://medal.tv/desktop/download/win"; Category="Launchers" }
 
     # Social
     @{ Name="Discord"; Url="https://discord.com/api/download?platform=win"; Category="Social" }
+    @{ Name="TeamSpeak 6"; Url="https://files.teamspeak-services.com/pre_releases/client/6.0.0-beta4.1/teamspeak-client.msi"; Category="Social" }
 
     # Streaming
     @{ Name="OBS Studio"; Url="https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.0.2-Full-Installer-x64.exe"; Category="Streaming" }
