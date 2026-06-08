@@ -33,6 +33,10 @@ $apps = @(
     # Peripherals
     @{ Name="Razer Synapse"; Url="https://rzr.to/synapse-3-pc-download"; Category="Peripherals" }
     @{ Name="Logitech G Hub"; Url="https://download01.logi.com/web/ftp/pub/techsupport/gaming/lghub_installer.exe"; Category="Peripherals" }
+    @{ Name="Corsair iCUE"; Url="https://www3.corsair.com/software/CUE_V5/public/modules/windows/installer/Install%20iCUE.exe"; Category="Peripherals" }
+    @{ Name="SteelSeries GG"; Url="https://steelseries.com/gg/downloads/gg/latest/windows"; Category="Peripherals" }
+    @{ Name="HyperX NGENUITY"; Url="https://files.hyperx.com/software-installers/ngenuity/stable/2.0.2/HyperX_NGENUITY_Installer.exe"; Category="Peripherals" }
+    
 )
 
 # Convert to objects for Out-GridView (URL + Silent hidden)
