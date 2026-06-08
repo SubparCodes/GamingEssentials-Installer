@@ -66,6 +66,7 @@ foreach ($item in $selected) {
 
     Write-Host "Downloading $name..."
     Invoke-WebRequest -Uri $url -OutFile $outfile -Headers @{ "User-Agent" = "Mozilla/5.0" }
+    Start-Process -FilePath $outfile
 }
 
 Write-Host "All selected installers have been launched."
