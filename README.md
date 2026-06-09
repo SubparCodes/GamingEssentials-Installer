@@ -8,3 +8,10 @@ PowerShell will most likely not let you run it unless you either:
 1. "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass" to run it just this once.
 2. "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser" to allow local scripts permanently.
 3. Or unblock the file by right-cling the .ps1 file, Properties, and then check "unblock"
+
+---
+
+Thank you for downloading my Gaming PC Optimizer!
+
+This is a short list of commands to disable GameDVR, Game Mode, and Enhanced Pointer Precision. This enables Hardware-Accelerated GPU Scheduling and sets your Power Plan to High Performance.
+I would only recommend you run this script if you have a DirectX12 capable GPU.
