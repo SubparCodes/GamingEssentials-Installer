@@ -36,7 +36,9 @@ $apps = @(
     @{ Name="Corsair iCUE"; Url="https://www3.corsair.com/software/CUE_V5/public/modules/windows/installer/Install%20iCUE.exe"; Category="Peripherals" }
     @{ Name="SteelSeries GG"; Url="https://steelseries.com/gg/downloads/gg/latest/windows"; Category="Peripherals" }
     @{ Name="HyperX NGENUITY"; Url="https://files.hyperx.com/software-installers/ngenuity/stable/2.0.2/HyperX_NGENUITY_Installer.exe"; Category="Peripherals" }
-    
+    @{ Name="Glorious CORE"; Url="https://gloriouscore.nyc3.digitaloceanspaces.com/CORE2/app/GloriousCORE_2.1.15_Setup.zip"; Category="Peripherals" }
+    @{ Name="ASUS Armoury Crate"; Url="https://dlcdnets.asus.com/pub/ASUS/mb/14Utilities/ArmouryCrateInstallTool.zip"; Category="Peripherals" }
+    @{ Name="Turtle Beach Swarm II"; Url="https://acpv.prod.turtlebeach.com/support/v2/software/us/429/Swarm-II.zip"; Category="Peripherals" }
 )
 
 # Convert to objects for Out-GridView (URL + Silent hidden)
@@ -58,15 +60,38 @@ if (-not $selected) {
 }
 
 foreach ($item in $selected) {
-
     $name   = $item.App
     $url    = $item.Url
-
-    $outfile = "$env:USERPROFILE\Downloads\$name-Installer.exe"
-
+    
+    $outfile = "$env:USERPROFILE\Downloads\$name-Installer"
+    
+    # Determine file extension from URL or content
+    if ($url -match "\.zip") {
+        $outfile += ".zip"
+    } else {
+        $outfile += ".exe"
+    }
+    
     Write-Host "Downloading $name..."
     Invoke-WebRequest -Uri $url -OutFile $outfile -Headers @{ "User-Agent" = "Mozilla/5.0" }
-    Start-Process -FilePath $outfile
+    
+    # If it's a zip file, extract and find the exe
+    if ($outfile -match "\.zip$") {
+        $extractPath = "$env:USERPROFILE\Downloads\$name-Extracted"
+        Write-Host "Extracting $name..."
+        Expand-Archive -Path $outfile -DestinationPath $extractPath -Force
+        
+        # Find the exe file in the extracted folder
+        $exeFile = Get-ChildItem -Path $extractPath -Recurse -Filter "*.exe" | Select-Object -First 1
+        
+        if ($exeFile) {
+            Write-Host "Running $($exeFile.Name)..."
+            Start-Process -FilePath $exeFile.FullName
+        } else {
+            Write-Host "No .exe found in $name extraction."
+        }
+    } else {
+        Write-Host "Running $name..."
+        Start-Process -FilePath $outfile
+    }
 }
-
-Write-Host "All selected installers have been launched."
